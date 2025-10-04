@@ -9,13 +9,13 @@ export default function Landing() {
   const [selectedCategory, setSelectedCategory] = useState("all")
 
   const categories = [
-    { id: "all", name: "All Suppliers", icon: "✨", color: "from-amber-400 to-yellow-600" },
-    { id: "venue", name: "Venues", icon: "🏛️", color: "from-amber-500 to-orange-500" },
-    { id: "dj", name: "DJs", icon: "🎧", color: "from-yellow-500 to-amber-500" },
-    { id: "cake", name: "Cakes", icon: "🎂", color: "from-red-500 to-rose-500" },
-    { id: "photographer", name: "Photographers", icon: "📸", color: "from-amber-600 to-yellow-600" },
-    { id: "decor", name: "Decorations", icon: "🎨", color: "from-red-600 to-red-700" },
-    { id: "entertainment", name: "Entertainment", icon: "🎪", color: "from-orange-500 to-red-500" }
+    { id: "all", name: "جميع الموردين", icon: "✨", color: "from-amber-400 to-yellow-600" },
+    { id: "venue", name: "القاعات", icon: "🏛️", color: "from-amber-500 to-orange-500" },
+    { id: "dj", name: "دي جي", icon: "🎧", color: "from-yellow-500 to-amber-500" },
+    { id: "cake", name: "حلويات", icon: "🎂", color: "from-red-500 to-rose-500" },
+    { id: "photographer", name: "المصورين", icon: "📸", color: "from-amber-600 to-yellow-600" },
+    { id: "decor", name: "الديكور", icon: "🎨", color: "from-red-600 to-red-700" },
+    { id: "entertainment", name: "الترفيه", icon: "🎪", color: "from-orange-500 to-red-500" }
   ]
 
   const filteredSuppliers = selectedCategory === "all" 
@@ -29,19 +29,11 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-4">
-              <img src={logo} alt="EventTak Logo" className="w-12 h-12 rounded-full object-cover shadow-gold" />
+              <img src={logo} alt="EventTak Logo" className="w-16 h-16 rounded-full object-cover shadow-gold" />
               <div>
-                <h1 className="text-3xl font-display font-bold text-gradient">EventTak</h1>
-                <p className="text-sm font-arabic text-stone-600">تاك - Your Touch</p>
+                <h1 className="text-4xl font-display font-bold text-gradient">EventTak</h1>
+                <p className="text-lg font-arabic text-stone-600">تاك - لمسة الخاص بك</p>
               </div>
-            </div>
-            <div className="flex space-x-4">
-              <Link 
-                to="/package" 
-                className="bg-gradient-professional text-white px-6 py-3 rounded-2xl hover:shadow-gold transition-all duration-300 font-medium"
-              >
-                View Packages
-              </Link>
             </div>
           </div>
         </div>
@@ -106,28 +98,32 @@ export default function Landing() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center animate-fade-in-up">
             <h1 className="text-6xl font-display font-bold text-stone-900 mb-6 leading-tight">
-              Create
-              <span className="text-gradient block">Unforgettable</span>
-              <span className="font-arabic text-4xl text-stone-600 block mt-2">تاك - Your Touch</span>
+              <span className="font-arabic text-5xl text-stone-600 block mb-2">أنشئ</span>
+              <span className="text-gradient block">ذكريات لا تُنسى</span>
+              <span className="font-arabic text-4xl text-stone-600 block mt-2">تاك - لمسة الخاص بك</span>
             </h1>
             <p className="text-xl text-stone-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Discover premium event suppliers, get AI-powered recommendations, and bring your vision to life with our culturally rich event planning platform.
+              اكتشف موردي الأحداث المتميزين، احصل على توصيات مدعومة بالذكاء الاصطناعي، وحقق رؤيتك مع منصتنا الغنية ثقافياً لتخطيط الأحداث.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-              <div className="glass-gold px-8 py-4 rounded-3xl shadow-cultural">
+            <div className="flex flex-col items-center mb-12">
+              <div className="glass-gold px-8 py-4 rounded-3xl shadow-cultural mb-6">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gradient-cultural rounded-full flex items-center justify-center">
                     <span className="text-white text-xl">🤖</span>
                   </div>
-                  <div className="text-left">
-                    <p className="font-semibold text-stone-800">AI Event Planner</p>
-                    <p className="text-sm text-stone-600">Get personalized recommendations</p>
+                  <div className="text-right">
+                    <p className="font-semibold text-stone-800">مخطط الأحداث بالذكاء الاصطناعي</p>
+                    <p className="text-sm text-stone-600">احصل على توصيات مخصصة</p>
                   </div>
                 </div>
               </div>
               <div className="text-center">
-                <p className="text-sm text-stone-500 mb-2">Click the chat button below</p>
-                <div className="w-8 h-8 bg-gradient-professional rounded-full animate-pulse-slow mx-auto"></div>
+                <p className="text-sm text-stone-500 mb-2">💬 ابحث عن زر المحادثة في الزاوية السفلية اليسرى</p>
+                <div className="flex items-center justify-center space-x-2">
+                  <div className="w-3 h-3 bg-gradient-professional rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-stone-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                  <div className="w-1 h-1 bg-stone-300 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                </div>
               </div>
             </div>
           </div>
@@ -138,8 +134,8 @@ export default function Landing() {
       <div className="bg-gradient-to-r from-stone-100/80 to-neutral-100/80 backdrop-blur-sm py-12 border-b border-stone-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-display font-bold text-stone-900 mb-3">Explore by Category</h2>
-            <p className="text-stone-600">Find the perfect suppliers for every aspect of your event</p>
+            <h2 className="text-3xl font-display font-bold text-stone-900 mb-3">استكشف حسب الفئة</h2>
+            <p className="text-stone-600">اعثر على الموردين المثاليين لكل جانب من جوانب حدثك</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category, index) => (
@@ -166,10 +162,10 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-display font-bold text-stone-900 mb-4">
-              {selectedCategory === "all" ? "Premium Suppliers" : categories.find(c => c.id === selectedCategory)?.name}
+              {selectedCategory === "all" ? "موردين متميزين" : categories.find(c => c.id === selectedCategory)?.name}
             </h2>
             <p className="text-lg text-stone-600">
-              {filteredSuppliers.length} professional supplier{filteredSuppliers.length !== 1 ? 's' : ''} ready to make your event extraordinary
+              {filteredSuppliers.length} مورد محترف {filteredSuppliers.length !== 1 ? 'جاهزون' : 'جاهز'} لجعل حدثك استثنائياً
             </p>
           </div>
 
@@ -194,13 +190,13 @@ export default function Landing() {
               <div className="w-24 h-24 bg-gradient-cultural rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-4xl">🔍</span>
               </div>
-              <h3 className="text-2xl font-display font-bold text-stone-900 mb-4">No suppliers found</h3>
+              <h3 className="text-2xl font-display font-bold text-stone-900 mb-4">لم يتم العثور على موردين</h3>
               <p className="text-stone-600 mb-8 max-w-md mx-auto">
-                Try selecting a different category or use our AI chatbot for personalized recommendations.
+                جرب اختيار فئة مختلفة أو استخدم مساعد الذكاء الاصطناعي للحصول على توصيات مخصصة.
               </p>
               <div className="flex justify-center">
                 <div className="bg-gradient-cultural text-white px-6 py-3 rounded-2xl">
-                  <span className="font-medium">💬 Ask our AI Assistant</span>
+                  <span className="font-medium">💬 اسأل مساعد الذكاء الاصطناعي</span>
                 </div>
               </div>
             </div>
@@ -214,10 +210,10 @@ export default function Landing() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-display font-bold text-stone-900 mb-6">
-              How It Works
+              كيف يعمل
             </h2>
             <p className="text-xl text-stone-600 max-w-2xl mx-auto">
-              Three simple steps to create your perfect event with professional suppliers and AI-powered planning
+              ثلاث خطوات بسيطة لإنشاء حدثك المثالي مع موردين محترفين وتخطيط ذكي مدعوم بالذكاء الاصطناعي
             </p>
           </div>
           
@@ -231,9 +227,9 @@ export default function Landing() {
                   1
                 </div>
               </div>
-              <h3 className="text-2xl font-display font-bold text-stone-900 mb-4">Discover Suppliers</h3>
+              <h3 className="text-2xl font-display font-bold text-stone-900 mb-4">اكتشف الموردين</h3>
               <p className="text-stone-600 leading-relaxed">
-                Browse our curated collection of premium event suppliers. Each partner is vetted for quality and rated by our community of event planners.
+                تصفح مجموعتنا المختارة بعناية من موردي الأحداث المتميزين. كل شريك يتم فحصه بدقة للجودة وتقييمه من قبل مجتمعنا من مخططي الأحداث المحترفين.
               </p>
             </div>
 
@@ -246,9 +242,9 @@ export default function Landing() {
                   2
                 </div>
               </div>
-              <h3 className="text-2xl font-display font-bold text-stone-900 mb-4">AI-Powered Planning</h3>
+              <h3 className="text-2xl font-display font-bold text-stone-900 mb-4">التخطيط بالذكاء الاصطناعي</h3>
               <p className="text-stone-600 leading-relaxed">
-                Get personalized recommendations from our intelligent assistant. It understands your needs and matches you with the perfect suppliers for your event.
+                احصل على توصيات مخصصة من مساعدنا الذكي المتطور. يفهم احتياجاتك بدقة ويطابقك مع الموردين المثاليين لحدثك.
               </p>
             </div>
 
@@ -261,9 +257,9 @@ export default function Landing() {
                   3
                 </div>
               </div>
-              <h3 className="text-2xl font-display font-bold text-stone-900 mb-4">Create Magic</h3>
+              <h3 className="text-2xl font-display font-bold text-stone-900 mb-4">أنشئ السحر</h3>
               <p className="text-stone-600 leading-relaxed">
-                Receive your complete event package with transparent pricing and all the suppliers you need to bring your vision to life.
+                احصل على باقة حدثك الكاملة مع تسعير شفاف ومباشر وجميع الموردين الذين تحتاجهم لتحقيق رؤيتك وتحويلها إلى واقع.
               </p>
             </div>
           </div>
