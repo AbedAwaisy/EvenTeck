@@ -9,7 +9,7 @@ import Chatbot from "./components/Chatbot"
 function App() {
   return (
     <AppProvider>
-      <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50">
+      <div className="min-h-screen bg-gradient-to-br from-stone-50 via-neutral-50 to-slate-50">
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/wizard" element={<Wizard />} />
